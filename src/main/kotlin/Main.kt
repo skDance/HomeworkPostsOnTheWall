@@ -21,12 +21,13 @@ data class Post(
     val ownerId: Int,
     val fromId: Int,
     val likesCount: Likes = Likes(0),
-    val text: String = "null",
-    val date: Long,
+    val text: String?,
+    val date: Long?,
     val friendsOnly: Boolean = false,
     val commentsCount: Int = 0,
     val repostsCount: Int = 0,
-    val views: Int = 0
+    val views: Int = 0,
+    val attachments: Array<Attachments> = emptyArray()
 ) {
     class Likes(count: Int) {
         var count = count
