@@ -26,7 +26,8 @@ data class Post(
     val friendsOnly: Boolean = false,
     val commentsCount: Int = 0,
     val repostsCount: Int = 0,
-    val views: Int = 0
+    val views: Int = 0,
+    val attachments: Array<Attachments> = emptyArray()
 ) {
     class Likes(count: Int) {
         var count = count
